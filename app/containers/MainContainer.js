@@ -7,7 +7,7 @@ var styles = {
   }
 };
 
-var MainComponent = React.createClass({
+var MainContainer = React.createClass({
 	render: function() {
 		return (
 			<div style={styles.container}>
@@ -17,4 +17,4 @@ var MainComponent = React.createClass({
 	}
 });
 
-export default MainComponent;
+export default MainContainer;
