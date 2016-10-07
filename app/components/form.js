@@ -1,6 +1,9 @@
 import React from 'react';
 var PropTypes = React.PropTypes;
 
+/*
+* Style
+*/
 var style = {
   display: 'flex',
   flexDirection: 'column',
@@ -55,6 +58,15 @@ function Form(props) {
       </Button>
     </div>
   )
+}
+
+/*
+* DEFINING TYPES
+*/
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  city: PropTypes.string.isRequired
 }
 
 export default Form;
