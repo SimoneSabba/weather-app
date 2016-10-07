@@ -1,4 +1,5 @@
 import React from 'react';
+import FormContainer from '../containers/FormContainer';
 
 var styles = {};
 
@@ -23,6 +24,7 @@ function Home(props) {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>Enter a City, a State or a ZIP code</h1>
+      <FormContainer />
     </div>
   )
 }
