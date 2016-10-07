@@ -27,12 +27,14 @@ function Button(props) {
 /*
 * INPUT TYPE COMPONENT
 */
-function InputCity(pros) {
+function InputCity(props) {
   return (
     <input 
       className='form-control'
-      placeholder='London, United Kingdom'
+      placeholder='London, UK'
       type='text'
+      value = {props.city}
+      onChange = {props.onChange}
       />
     );
 }
@@ -43,7 +45,10 @@ function InputCity(pros) {
 function Form(props) {
   return (
     <div style={style}>
-      <InputCity></InputCity>
+      <InputCity 
+        city={props.city}
+        onChange={props.onUpdate}>
+      </InputCity>
       <Button
         onSubmit={props.onSubmit}>
         Get Weather
