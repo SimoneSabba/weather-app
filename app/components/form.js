@@ -54,7 +54,7 @@ function Form(props) {
       </InputCity>
       <Button
         onSubmit={props.onSubmit}>
-        Get Weather
+        Find it out!
       </Button>
     </div>
   )
