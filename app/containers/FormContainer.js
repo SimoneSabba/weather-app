@@ -1,14 +1,20 @@
 import React from 'react';
 import Form from '../components/form';
+import api from '../helpers/api'
 
 var FormContainer = React.createClass({
 	
+	contextTypes: {
+    	router: React.PropTypes.object.isRequired
+  	},
+
 	getInitialState: function () {
 	    return { city: '' }
   	},
 
-	onSubmit: function () {
-    	console.log('onSubmit')
+	onSubmit: function (e) {
+		e.preventDefault();
+		this.context.router.push('/forecast/' + this.state.city)
   	},
 
   	onUpdate: function (e) {
