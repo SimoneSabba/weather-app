@@ -6,7 +6,7 @@ var PropTypes = React.PropTypes;
 */
 var style = {
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
   maxWidth: 300,
