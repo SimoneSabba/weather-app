@@ -47,7 +47,7 @@ function DayWeather (props) {
   let iconUrl = utils.getIconPath(icon);
 
   return (
-    <div style={styles.dayContainer}>
+    <div style={styles.dayContainer} onClick={props.onClickDay}>
       <img style={styles.weather} src={iconUrl} alt='Weather' />
       <h2 style={styles.subheader}>{date}</h2>
     </div>
@@ -60,7 +60,7 @@ function ForecastUI(props) {
 			<h1 style={styles.header}> {props.city}</h1>
 			<div style={styles.container}>
         		{props.forecastData.list.map(function (listItem) {
-	          	return <DayWeather key={listItem.dt} day={listItem} />
+	          	return <DayWeather key={listItem.dt} day={listItem} onClickDay={props.onClickDay.bind(null, listItem)}/>
 	        })}
       </div>
 		</div>
@@ -72,7 +72,7 @@ function Forecast(props) {
   return (
   	props.isLoading 
   		? <h1 style={styles.header}> Loading... </h1>
-  		: <ForecastUI city={props.city} forecastData={props.forecastData.data} />
+  		: <ForecastUI city={props.city} forecastData={props.forecastData.data} onClickDay={props.onClickDay}/>
   )
 }
 
