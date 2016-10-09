@@ -19,11 +19,11 @@ var ForecastContainer = React.createClass({
   	},
 
   	componentDidMount: function () {
-    	api.getForecast(this.state.city).then(this.handleForecastData);
+    	api.getForecast(this.props.routeParams.city).then(this.handleForecastData);
   	},
 
   	componentWillReceiveProps: function (nextProps) {
-    	api.getForecast(this.state.city).then(this.handleForecastData);
+    	api.getForecast(nextProps.routeParams.city).then(this.handleForecastData);
   	},
 
 	render: function() {
