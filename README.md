@@ -1,5 +1,4 @@
 # Weather app
-(work in progress...)
 
 This is a weather app built with ReactJS and using the [Open Weather API](http://openweathermap.org/api)
 
