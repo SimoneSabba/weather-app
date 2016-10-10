@@ -35,6 +35,13 @@ function getIconPath(icon) {
 }
 
 /*
+* Convert temperature from Kelvin to Celsius
+*/
+function kelvinToCelsius (kelvin) {
+  return parseInt(((kelvin - 273.15)* 1.8000 + 32.00), 10)
+}
+
+/*
 * Format date in the format DD, M (eg: Monday, Oct 10 )
 */
 function formatDate(d) {
@@ -50,7 +57,8 @@ function formatDate(d) {
 */
 var utils = {
 	getIconPath: getIconPath,
-	formatDate: formatDate
+	formatDate: formatDate,
+  kelvinToCelsius: kelvinToCelsius
 };
 
 export default utils;
