@@ -1,6 +1,11 @@
 import React from 'react';
 import utils from '../helpers/utils';
 
+var PropTypes = React.PropTypes;
+
+/*
+* Define component css style
+*/
 var styles = {};
 
 styles.dayContainer = {
@@ -34,6 +39,14 @@ function DayWeather(props) {
       <h2 style={styles.subheader}>{date}</h2>
     </div>
   )
+}
+
+DayWeather.propTypes = {
+	day: PropTypes.shape({
+		dt: PropTypes.number.isRequired,
+    	weather: PropTypes.array.isRequired,
+  	}).isRequired,
+  handleClick: PropTypes.func,
 }
 
 export default DayWeather;
